@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="ElyteSys">
+  <defs>
+    <linearGradient id="elyte-bg" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D4BFF"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="elyte-bolt" x1="11" y1="6" x2="21" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#elyte-bg)"/>
+  <path
+    fill="url(#elyte-bolt)"
+    d="M17.8 5.5 10.5 16.8h5.2l-1.8 9.7 9.1-12.4h-5.1l1.9-8.6z"
+  />
+</svg>

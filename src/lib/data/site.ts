@@ -1,0 +1,42 @@
+export const site = {
+  name: "ElyteSys",
+  nameAccent: "SYS",
+  namePrefix: "ELYTE",
+  tagline: "Trusted Tech Experts in TN",
+  phone: "+91 99726 69956",
+  phoneRaw: "919972669956",
+  email: "support@elytesys.com",
+  address: "123, Tech Park Avenue, Anna Nagar, Chennai, Tamil Nadu 600040",
+  whatsappUrl: "https://wa.me/919972669956",
+  mapEmbedUrl:
+    "https://maps.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3885.654520415519!2d80.23586027507899!3d13.121059087208195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA3JzE1LjgiTiA4MMKwMTQnMTguNCJF!5e0!3m2!1sen!2sin!4v1781887304691!5m2!1sen!2sin",
+  social: {
+    instagram: "#",
+    facebook: "#",
+    youtube: "#",
+    twitter: "#",
+  },
+  navLinks: [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About Us" },
+    { href: "#services", label: "Services" },
+    { href: "#shop", label: "Shop" },
+    { href: "#blog", label: "Blog" },
+    { href: "#contact", label: "Contact" },
+  ],
+  footerLinks: [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About Us" },
+    { href: "#services", label: "Our Services" },
+    { href: "#shop", label: "Shop Online" },
+    { href: "#contact", label: "Contact Us" },
+  ],
+  footerServices: [
+    "Screen Replacement",
+    "Motherboard Repair",
+    "Data Recovery",
+    "SSD Upgrade",
+    "Battery Replacement",
+  ],
+  yearsExperience: 15,
+} as const;
