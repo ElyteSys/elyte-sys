@@ -1,16 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { Menu } from "lucide-react";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { site } from "@/lib/data/site";
-import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import { SiteLogo } from "@/components/layout/SiteLogo";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
@@ -19,9 +10,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import { site } from "@/lib/data/site";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { SiteLogo } from "@/components/layout/SiteLogo";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 export function Navbar() {
   const activeSection = useScrollSpy();
@@ -34,11 +34,11 @@ export function Navbar() {
   });
   const backgroundColor = useTransform(
     backgroundOpacity,
-    (v) => `rgb(var(--navbar-bg-rgb) / ${v * 0.95})`
+    (v) => `rgb(var(--navbar-bg-rgb) / ${v * 0.95})`,
   );
   const borderColor = useTransform(
     backgroundOpacity,
-    (v) => `rgb(var(--navbar-border-rgb) / ${v * 0.08})`
+    (v) => `rgb(var(--navbar-border-rgb) / ${v * 0.08})`,
   );
 
   return (
@@ -59,7 +59,7 @@ export function Navbar() {
             priority
             className={cn(
               "transition-[filter] duration-300",
-              !isScrolled && "brightness-0 invert"
+              !isScrolled && "brightness-0 invert",
             )}
           />
         </Link>
@@ -76,14 +76,14 @@ export function Navbar() {
                       "hover:text-primary",
                       activeSection === link.href.slice(1)
                         ? "text-primary"
-                        : "text-muted-foreground"
+                        : "text-muted-foreground",
                     )
                   : cn(
                       "hover:text-white",
                       activeSection === link.href.slice(1)
                         ? "text-white"
-                        : "text-white/75"
-                    )
+                        : "text-white/75",
+                    ),
               )}
             >
               {link.label}
@@ -100,7 +100,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className={cn(
               buttonVariants({ size: "sm", variant: "default" }),
-              "hidden sm:inline-flex shadow-[0_4px_15px_rgba(59,130,246,0.4)]"
+              "hidden sm:inline-flex shadow-[0_4px_15px_rgba(59,130,246,0.4)]",
             )}
           >
             Chat Now
@@ -115,14 +115,17 @@ export function Navbar() {
                   className={cn(
                     "md:hidden",
                     !isScrolled &&
-                      "text-white hover:bg-white/10 hover:text-white"
+                      "text-white hover:bg-white/10 hover:text-white",
                   )}
                 />
               }
             >
               <Menu className="size-5" />
             </SheetTrigger>
-            <SheetContent side="right" className="glass-card border-border bg-card/95">
+            <SheetContent
+              side="right"
+              className="glass-card border-border bg-card/95"
+            >
               <SheetHeader>
                 <SheetTitle className="sr-only">{site.name}</SheetTitle>
                 <SiteLogo />
@@ -136,7 +139,7 @@ export function Navbar() {
                       "text-lg font-medium transition-colors hover:text-primary",
                       activeSection === link.href.slice(1)
                         ? "text-primary"
-                        : "text-muted-foreground"
+                        : "text-muted-foreground",
                     )}
                   >
                     {link.label}
@@ -146,7 +149,10 @@ export function Navbar() {
                   href={site.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={cn(buttonVariants({ variant: "default" }), "mt-4 w-full")}
+                  className={cn(
+                    buttonVariants({ variant: "default" }),
+                    "mt-4 w-full",
+                  )}
                 >
                   Chat on WhatsApp
                 </a>

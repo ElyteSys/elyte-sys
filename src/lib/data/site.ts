@@ -21,7 +21,6 @@ export const site = {
     { href: "#about", label: "About Us" },
     { href: "#services", label: "Services" },
     { href: "#shop", label: "Shop" },
-    { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contact" },
   ],
   footerLinks: [
@@ -38,5 +37,5 @@ export const site = {
     "SSD Upgrade",
     "Battery Replacement",
   ],
-  yearsExperience: 15,
+  yearsExperience: 10,
 } as const;

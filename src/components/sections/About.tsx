@@ -1,15 +1,31 @@
-import Image from "next/image";
-import { Shield, Tag, Timer, Microchip } from "lucide-react";
-import { site } from "@/lib/data/site";
 import { GlassCard } from "@/components/domain/GlassCard";
 import { Counter } from "@/components/motion/Counter";
 import { Reveal } from "@/components/motion/Reveal";
+import { site } from "@/lib/data/site";
+import { Microchip, Shield, Tag, Timer } from "lucide-react";
+import Image from "next/image";
 
 const aboutFeatures = [
-  { icon: Microchip, title: "Genuine Parts", desc: "100% OEM guaranteed" },
-  { icon: Timer, title: "Fast Repair", desc: "Same day delivery" },
-  { icon: Tag, title: "Best Pricing", desc: "Affordable luxury" },
-  { icon: Shield, title: "Trusted Dealer", desc: "50,000+ happy clients" },
+  {
+    icon: Microchip,
+    title: "IT Solution",
+    desc: "An well experienced IT services & solution provider",
+  },
+  {
+    icon: Timer,
+    title: "Fast Repair",
+    desc: "Backed up by a highly talented and knowledgeable team",
+  },
+  {
+    icon: Tag,
+    title: "Best Pricing",
+    desc: "Competitive pricing with transparent quotes and no hidden costs",
+  },
+  {
+    icon: Shield,
+    title: "Trusted Dealer",
+    desc: "100% resilient, and stable IT infrastructure available",
+  },
 ];
 
 export function About() {
@@ -41,14 +57,13 @@ export function About() {
             About {site.name}
           </span>
           <h2 className="text-3xl font-bold md:text-4xl">
-            Tamil Nadu&apos;s Most Trusted{" "}
-            <span className="text-gradient">Tech Hub</span>
+            We have a smart solution for each IT challenge
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            We are a premium web design and tech repair agency dedicated to
-            providing top-tier solutions. From high-end gaming rigs to complex
-            motherboard chip-level repairs, our expert technicians deliver
-            perfection.
+            <span className="text-gradient">ElyteSys</span> delivers innovative
+            and reliable IT solutions tailored to your business needs. You can
+            count on us for scalable, cost-effective, and high-quality
+            technology services that drive growth and digital transformations.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {aboutFeatures.map(({ icon: Icon, title, desc }) => (

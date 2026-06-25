@@ -1,20 +1,20 @@
 "use client";
 
-import { useState } from "react";
-import type { Product } from "@/lib/data/types";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { ProductModal } from "@/components/domain/ProductModal";
-import { Hero } from "@/components/sections/Hero";
-import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
-import { BestSelling } from "@/components/sections/BestSelling";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { About } from "@/components/sections/About";
+import { BestSelling } from "@/components/sections/BestSelling";
+import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
+import { Contact } from "@/components/sections/Contact";
+import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Shop } from "@/components/sections/Shop";
-// import { Blog } from "@/components/sections/Blog";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Contact } from "@/components/sections/Contact";
+import type { Product } from "@/lib/data/types";
+import { useState } from "react";
+// import { Blog } from "@/components/sections/Blog";
 
 export function PageContent() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -30,9 +30,9 @@ export function PageContent() {
       <Navbar />
       <Hero />
       <BrandsMarquee />
-      <BestSelling onProductSelect={handleProductSelect} />
-      <About />
       <Services />
+      <About />
+      <BestSelling onProductSelect={handleProductSelect} />
       <Shop onProductSelect={handleProductSelect} />
       {/* <Blog /> */}
       <Testimonials />
