@@ -1,13 +1,15 @@
+import LayoutShell from "@/components/layout-shell";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-outfit",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,18 +30,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("scroll-smooth", outfit.variable)}
+      className={cn("scroll-smooth", poppins.variable)}
       suppressHydrationWarning
     >
       <body className="font-sans antialiased">
         <ThemeProvider>
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
-          <main id="main-content" className="flex w-full flex-col">
-            {children}
-          </main>
-          <div className="ambient-glow-2" aria-hidden="true" />
+          <LayoutShell>{children}</LayoutShell>
         </ThemeProvider>
       </body>
     </html>
