@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const STATS = [
-  { value: "2009", label: "Founded" },
+  { value: "2026", label: "Founded" },
   { value: "1,200+", label: "Business Clients" },
   { value: "15+", label: "Years Experience" },
   { value: "200+", label: "Certified Engineers" },
