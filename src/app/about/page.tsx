@@ -1,3 +1,4 @@
+import { h1 } from "framer-motion/client";
 import {
   ArrowRight,
   Award,
@@ -8,14 +9,15 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
+      
 const STATS = [
-  { value: "2026", label: "Founded" },
-  { value: "1,200+", label: "Business Clients" },
-  { value: "15+", label: "Years Experience" },
-  { value: "200+", label: "Certified Engineers" },
-  { value: "50+", label: "Cities Served" },
-  { value: "98%", label: "SLA Compliance" },
+  <h1 class = "center">Why Choose ElyteSys?</h1>  
+  // { value: "2026", label: "Founded" },
+  // { value: "1,200+", label: "Business Clients" },
+  // { value: "10+", label: "Years Experience" },
+  // { value: "200+", label: "Certified Engineers" },
+  // { value: "50+", label: "Cities Served" },
+  // { value: "98%", label: "SLA Compliance" },
 ];
 
 const TEAM = [
@@ -69,12 +71,13 @@ export default function About() {
           >
             India&apos;s Trusted B2B
             <br />
-            IT Partner Since 2009
+            IT Partner 
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl">
-            We started with a single service center in Bengaluru. Today, we
-            serve over 1,200 businesses across India — from startups to Fortune
-            500 enterprises.
+            Your Trusted B2B IT Solutions Partner
+At ElyteSys Pvt. Ltd., we help businesses build, maintain, and manage reliable IT infrastructure with high-quality products and professional support.
+Founded in 2026, ElyteSys was established with a vision to simplify enterprise IT procurement and provide dependable technology solutions for businesses of all sizes. Although we are a growing company, our team brings hands-on industry expertise in laptop sales, IT services, and enterprise support.
+We believe every business deserves fast, transparent, and reliable IT solutions backed by exceptional customer service.
           </p>
         </div>
       </section>
@@ -101,36 +104,36 @@ export default function About() {
       {/* Company Overview */}
       <section className="py-20 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-3 block">
+          {/* <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-3 block">
             Our Story
-          </span>
+          </span> */}
           <h2
             className="text-3xl font-bold mb-5"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Built by IT Professionals, for Businesses
+            What We Do
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              TechServPro was founded in 2009 by Vikram Rao, a veteran IT
-              engineer who saw a gap in the market — businesses needed a single,
-              reliable partner for all their technology needs, not a dozen
-              different vendors.
+             We specialize in delivering end-to-end IT solutions for corporate and business clients, including:
+             Enterprise Laptop & Desktop Sales
+             Apple MacBook Sales & ServicesBulk IT Procurement Laptop & Desktop Repair Services Annual Maintenance Contracts (AMC) Rental Laptops for Businesses On-Site IT Support
+             IT Infrastructure Consulting Remote Technical Support Preventive Health Check & Maintenance
             </p>
-            <p>
+            {/* <p>
               Starting with laptop repair and AMC services for small offices in
               Bengaluru, we rapidly expanded as word spread about our fast
               response times and transparent pricing. By 2015, we had offices in
               Mumbai and Hyderabad.
-            </p>
-            <p>
+            </p> */}
+            {/* <p>
               Today, our team of 200+ certified engineers supports businesses
               from government organizations and manufacturing plants to
               healthcare networks and high-growth startups — all with the same
               commitment to quality that defined us from day one.
-            </p>
+            </p> */}
           </div>
-          <div className="mt-8 space-y-3">
+          {/* <div className="mt-8 space-y-3">
             {[
               "OEM-authorized service for Dell, HP, Lenovo & Apple",
               "ISO 9001:2015 certified quality management",
@@ -145,7 +148,7 @@ export default function About() {
                 {t}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <Image
@@ -155,7 +158,7 @@ export default function About() {
             height={560}
             className="rounded-2xl w-full object-cover h-105 shadow-xl"
           />
-          <div className="absolute -bottom-5 -left-5 bg-white border border-border rounded-2xl p-5 shadow-lg">
+          {/* <div className="absolute -bottom-5 -left-5 bg-white border border-border rounded-2xl p-5 shadow-lg">
             <div className="flex gap-1 mb-1">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star
@@ -170,7 +173,7 @@ export default function About() {
             <p className="text-xs text-muted-foreground">
               From 800+ verified reviews
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -188,9 +191,7 @@ export default function About() {
               Our Mission
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              To be the most dependable IT partner for businesses across India —
-              delivering fast, transparent, and high-quality technology services
-              that eliminate downtime and enable growth.
+              To become one of India's most trusted B2B IT partners by delivering reliable technology solutions, exceptional service, and long-term value to every client.
             </p>
           </div>
           <div className="bg-[#0057D9] rounded-2xl p-8 text-white">
@@ -198,22 +199,20 @@ export default function About() {
               <Eye className="w-6 h-6 text-white" />
             </div>
             <h3
-              className="text-xl font-bold mb-3"
+              className="text-xl font-bold mb-3"  
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Our Vision
             </h3>
             <p className="text-blue-100 leading-relaxed">
-              To become India&apos;s #1 integrated IT services company for the
-              B2B segment — bridging technology gaps and enabling every Indian
-              business to operate with world-class IT infrastructure.
+              To empower businesses with innovative, affordable, and dependable IT solutions while building lasting relationships based on trust, quality, and customer satisfaction.
             </p>
           </div>
         </div>
       </section>
 
       {/* Team */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      {/* <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-2 block">
             Leadership
@@ -245,20 +244,21 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications */}
       <section className="py-20 bg-[#F1F5F9]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10">
-            <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-2 block">
+            {/* <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-2 block">
               Credentials
-            </span>
+            </span> */}
             <h2
               className="text-3xl font-bold text-[#111827]"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Certifications &amp; Partnerships
+              Our Core Values
+
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -285,8 +285,8 @@ export default function About() {
             Ready to Partner with Us?
           </h2>
           <p className="text-gray-400 mb-7">
-            Join 1,200+ businesses that trust TechServPro for their critical IT
-            infrastructure.
+            Serving Businesses Across India
+Whether you're a startup, SME, educational institution, or enterprise, ElyteSys is committed to delivering the right technology solutions to help your business grow efficiently.
           </p>
           <Link
             href="/contact"
