@@ -82,10 +82,11 @@ export default function Clients() {
             className="text-4xl lg:text-5xl font-bold mb-4"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            1,200+ Businesses Trust Us
+            Trusted Technology Partner for Businesses
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            From startups to enterprises — across industries and geographies.
+            At ElyteSys Pvt. Ltd., we are committed to delivering reliable IT solutions that help businesses operate efficiently and grow with confidence. We work closely with organizations to understand their unique technology requirements and provide customized solutions backed by quality products and responsive support.
+Whether you're a startup, small business, educational institution, or a large enterprise, our goal is to become your trusted long-term IT partner.
           </p>
         </div>
       </section>
@@ -112,9 +113,9 @@ export default function Clients() {
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-muted-foreground mt-6">
+        {/* <p className="text-center text-sm text-muted-foreground mt-6">
           + 1,188 more businesses across India
-        </p>
+        </p> */}
       </section>
 
       {/* Industries */}
@@ -226,10 +227,11 @@ export default function Clients() {
             className="text-3xl font-bold mb-4"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Become Our Next Success Story
+            Let's Build Your IT Infrastructure Together
           </h2>
           <p className="text-gray-400 mb-7">
-            Let&apos;s build your custom IT support plan today.
+            Looking for a reliable IT partner for laptop procurement, AMC services, rentals, infrastructure solutions, or technical support?
+Partner with ElyteSys Pvt. Ltd. and experience professional IT services tailored to your business needs.
           </p>
           <Link
             href="/contact"

@@ -116,8 +116,9 @@ export default function Services() {
             Complete IT Services for Businesses
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            From laptop sales to full IT infrastructure management — one
-            partner, zero gaps.
+            End-to-End Technology Solutions for Modern Enterprises
+            At ElyteSys Pvt. Ltd., <p>we provide reliable IT products and professional services that help businesses operate efficiently and securely. From enterprise procurement to technical support, we are your trusted technology partner for all your business IT needs.</p>
+            
           </p>
         </div>
       </section>
@@ -205,11 +206,11 @@ export default function Services() {
             className="text-3xl font-bold mb-4"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Not Sure Which Service You Need?
+            Ready to Upgrade Your Business IT?
           </h2>
           <p className="text-gray-400 mb-7">
-            Our consultants will assess your IT environment and recommend the
-            right plan — free of charge.
+Whether you're looking for enterprise laptop procurement, AMC support, rental laptops, IT infrastructure solutions, or professional repair services, ElyteSys Pvt. Ltd. is here to help.
+Contact us today for a free consultation and customized business IT solution.
           </p>
           <Link
             href="/contact"
