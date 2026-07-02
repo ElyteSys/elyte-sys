@@ -19,26 +19,17 @@ const INDUSTRIES = [
 ];
 
 const LOGOS = [
-  "Nexus Pharma",
-  "Greenfield Infra",
-  "FinBridge Solutions",
-  "BrightPath Schools",
-  "MediCore Hospitals",
-  "Apex Manufacturing",
-  "ClearSky Startups",
-  "Vidya Academy",
-  "StateBank Cooperative",
-  "TrustGrid Finance",
-  "BuildRight Engineers",
-  "NetCore Systems",
+  "BigThinkCode",
+  "LightMetrics",
+  "ARMTECH India"
 ];
 
 const CASE_STUDIES = [
   {
-    client: "Nexus Pharma Ltd.",
+    client: "Our Commitment",
     industry: "Healthcare",
     challenge:
-      "300 laptops across 4 cities with no centralized IT management — frequent breakdowns causing production delays.",
+      "Every client is a valued partner. We focus on building long-term relationships by delivering dependable IT solutions, timely support, and exceptional service quality. Our commitment is to help businesses maximize productivity through reliable technology and professional expertise.",
     solution:
       "Deployed a 3-year Premium AMC covering all devices. Assigned a resident engineer for HQ. Onboarded all assets into our management portal with monthly health reports.",
     result:
@@ -46,26 +37,15 @@ const CASE_STUDIES = [
     color: "#10B981",
   },
   {
-    client: "Greenfield Infra Pvt. Ltd.",
+    client: "Growing Together",
     industry: "Construction & Real Estate",
     challenge:
-      "Needed 80 fully configured laptops for a 3-month site project on a 10-day notice. Zero in-house IT team.",
+      "As a growing IT solutions company, ElyteSys is continuously expanding its network of business clients across India. We are dedicated to earning the trust of every organization we serve through integrity, quality, and consistent customer satisfaction.",
     solution:
       "Sourced, configured with their project management software, and delivered all 80 units across 2 sites within 7 days. Provided a dedicated support engineer on-site.",
     result:
       "Project launched on schedule. Devices collected and data-wiped at project close. Client re-booked for next project.",
     color: "#0057D9",
-  },
-  {
-    client: "BrightPath School Network",
-    industry: "Education",
-    challenge:
-      "200+ student laptops across 6 branches — uncoordinated repair processes, long turnaround times, no asset records.",
-    solution:
-      "Structured AMC with quarterly preventive visits to each branch. Built a full asset inventory. Established a WhatsApp support channel for staff.",
-    result:
-      "Repair turnaround reduced from 2 weeks to 48 hours. Full asset visibility for management. 100% renewed AMC the following year.",
-    color: "#7C3AED",
   },
 ];
 
@@ -85,8 +65,14 @@ export default function Clients() {
             Trusted Technology Partner for Businesses
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            At ElyteSys Pvt. Ltd., we are committed to delivering reliable IT solutions that help businesses operate efficiently and grow with confidence. We work closely with organizations to understand their unique technology requirements and provide customized solutions backed by quality products and responsive support.
-Whether you're a startup, small business, educational institution, or a large enterprise, our goal is to become your trusted long-term IT partner.
+            At ElyteSys Pvt. Ltd., we are committed to delivering reliable IT
+            solutions that help businesses operate efficiently and grow with
+            confidence. We work closely with organizations to understand their
+            unique technology requirements and provide customized solutions
+            backed by quality products and responsive support. Whether
+            you&apos;re a startup, small business, educational institution, or a
+            large enterprise, our goal is to become your trusted long-term IT
+            partner.
           </p>
         </div>
       </section>
@@ -101,7 +87,7 @@ Whether you're a startup, small business, educational institution, or a large en
             Companies We Work With
           </h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
           {LOGOS.map((name) => (
             <div
               key={name}
@@ -166,7 +152,7 @@ Whether you're a startup, small business, educational institution, or a large en
             Case Studies
           </h2>
         </div>
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           {CASE_STUDIES.map(
             ({ client, industry, challenge, solution, result, color }) => (
               <div
@@ -182,36 +168,14 @@ Whether you're a startup, small business, educational institution, or a large en
                     >
                       {client}
                     </h3>
-                    <span
-                      className="text-xs font-medium px-2.5 py-1 rounded-full"
-                      style={{ backgroundColor: `${color}15`, color }}
-                    >
-                      {industry}
-                    </span>
                   </div>
                   <div className="space-y-4 text-sm">
                     <div>
-                      <p className="font-semibold text-[#374151] mb-1">
-                        Challenge
-                      </p>
                       <p className="text-muted-foreground leading-relaxed">
                         {challenge}
                       </p>
                     </div>
-                    <div>
-                      <p className="font-semibold text-[#374151] mb-1">
-                        Solution
-                      </p>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {solution}
-                      </p>
-                    </div>
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-3">
-                      <p className="font-semibold text-[#10B981] mb-1 text-xs uppercase tracking-wide">
-                        Result
-                      </p>
-                      <p className="text-[#374151] leading-relaxed">{result}</p>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -222,16 +186,19 @@ Whether you're a startup, small business, educational institution, or a large en
 
       {/* CTA */}
       <section className="py-16 bg-[#111827] text-white text-center">
-        <div className="max-w-2xl mx-auto px-6">
+        <div className="max-w-3xl mx-auto px-6">
           <h2
             className="text-3xl font-bold mb-4"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Let's Build Your IT Infrastructure Together
+            Let&apos;s Build Your IT Infrastructure Together
           </h2>
           <p className="text-gray-400 mb-7">
-            Looking for a reliable IT partner for laptop procurement, AMC services, rentals, infrastructure solutions, or technical support?
-Partner with ElyteSys Pvt. Ltd. and experience professional IT services tailored to your business needs.
+            Looking for a reliable IT partner for laptop procurement, AMC
+            services, rentals, infrastructure solutions, or technical support?
+
+            Partner with ElyteSys Pvt. Ltd. and experience professional IT
+            services tailored to your business needs.
           </p>
           <Link
             href="/contact"

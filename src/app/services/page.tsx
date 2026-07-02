@@ -15,19 +15,19 @@ const SECTIONS = [
     id: "sales",
     emoji: <Laptop />,
     title: "Laptop Sales",
-    subtitle: "New, Refurbished & Bulk Corporate Orders",
+    subtitle: "Enterprise Laptop & Desktop Sales",
     color: "#0057D9",
     bg: "bg-blue-50",
-    desc: "We supply laptops from all major brands — configured, deployed, and supported end-to-end for your business.",
+    desc: "Equip your business with genuine laptops, desktops, workstations, and accessories from leading brands such as Dell, HP, Lenovo, Apple, ASUS, Acer, and more. Whether you need a single device or a bulk corporate order, we deliver quality products at competitive prices.",
     image:
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&h=440&fit=crop&auto=format",
     items: [
-      "New Laptops — Dell, HP, Lenovo, Apple, ASUS",
-      "Refurbished Grade-A Laptops with warranty",
-      "Bulk Corporate Orders with volume pricing",
-      "Workstations & high-performance configurations",
-      "Pre-configured software & OS deployment",
-      "Asset tagging & inventory management",
+      "Corporate Laptop Sales",
+      "Bulk IT Procurement",
+      "New & Refurbished Systems",
+      "Apple MacBooks & Windows Laptops",
+      "Genuine Accessories",
+      "Custom Business Configurations",
     ],
   },
   {
@@ -53,19 +53,20 @@ const SECTIONS = [
     id: "amc",
     emoji: <Clipboard />,
     title: "AMC Support",
-    subtitle: "Annual Maintenance Contracts with SLA Guarantees",
+    subtitle: "Annual Maintenance Contracts (AMC)",
     color: "#10B981",
     bg: "bg-green-50",
-    desc: "Comprehensive AMC plans that keep your entire IT fleet running — with defined response times and proactive care.",
+    desc: "Reduce unexpected breakdowns with our comprehensive AMC solutions. We offer preventive maintenance, priority support, and regular health checks to ensure your IT infrastructure remains reliable throughout the year.",
     image:
       "https://images.unsplash.com/photo-1629837093109-11325d6e7afd?w=700&h=440&fit=crop&auto=format",
     items: [
-      "Preventive Maintenance visits (quarterly / monthly)",
-      "Remote Support via phone, email & remote desktop",
-      "On-Site Support with guaranteed response SLA",
-      "Asset Management & lifecycle tracking",
-      "Priority escalation for critical systems",
-      "Quarterly performance & health reports",
+      "AMC Includes",
+      "Preventive Maintenance",
+      "Routine Health Checks",
+      "Priority Technical Support",
+      "On-Site Engineer Visits",
+      "Software Maintenance",
+      "Asset Management Assistance",
     ],
   },
   {
@@ -75,35 +76,95 @@ const SECTIONS = [
     subtitle: "End-to-End Infrastructure for Growing Businesses",
     color: "#F59E0B",
     bg: "bg-amber-50",
-    desc: "From network design to cloud migration — we plan, deploy, and manage your full IT infrastructure.",
+    desc: "Build a secure, scalable, and efficient IT environment with our infrastructure services designed for startups, SMEs, and enterprise organizations.",
     image:
       "https://images.unsplash.com/photo-1680992046626-418f7e910589?w=700&h=440&fit=crop&auto=format",
     items: [
-      "Network Setup — LAN, WAN, Wi-Fi, VPN",
-      "Server Management — on-premise & cloud",
-      "Cloud Solutions — AWS, Azure, Google Cloud",
-      "Cybersecurity — firewalls, endpoint protection, audits",
-      "IT Infrastructure Consulting & roadmapping",
-      "Helpdesk & IT support outsourcing",
+      "Office IT Setup",
+      "Network Installation",
+      "Wi-Fi Deployment",
+      "Server Configuration",
+      "Data Storage Solutions",
+      "Security & Endpoint Protection",
+      "IT Consulting & Planning",
+    ],
+  },
+  {
+    id: "rental",
+    emoji: <MapPin />,
+    title: "Rental",
+    subtitle: "Rental Laptops for Businesses",
+    color: "#0EA5E9",
+    bg: "bg-sky-50",
+    desc: "Need laptops for a short-term project, training session, or temporary workforce? We provide flexible rental solutions with fully configured business-ready devices.",
+    image:
+      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+    items: [
+      "Daily, Weekly & Monthly Plans",
+      "Bulk Laptop Rentals",
+      "Corporate Events",
+      "Employee Onboarding",
+      "Training Programs",
+      "Project-Based Requirements",
     ],
   },
   {
     id: "onsite",
     emoji: <MapPin />,
     title: "On-Site Support",
-    subtitle: "Resident Engineers & Emergency Dispatch",
+    subtitle: "On-Site IT Support",
     color: "#0EA5E9",
     bg: "bg-sky-50",
-    desc: "Our field engineers come to you — for planned visits, resident deployments, or same-day emergency callouts.",
+    desc: "Our experienced engineers provide prompt on-site assistance to resolve technical issues quickly and efficiently.",
     image:
       "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
     items: [
-      "Emergency Support — same-day dispatch",
-      "Resident Engineers at your office (full-time / part-time)",
-      "Multi-Location Support across branches",
-      "Scheduled preventive visits",
-      "Hardware installation & configuration",
-      "End-user training & onboarding",
+      "Support Services",
+      "Hardware Troubleshooting",
+      "Software Installation",
+      "Network Support",
+      "Printer Installation",
+      "Office IT Maintenance",
+      "Emergency Support",
+    ],
+  },
+  {
+    id: "enterprise",
+    emoji: <MapPin />,
+    title: "Enterprise",
+    subtitle: "Enterprise IT Procurement",
+    color: "#0EA5E9",
+    bg: "bg-sky-50",
+    desc: "Simplify your IT purchasing process with our procurement services. We help businesses source quality IT equipment at competitive prices with reliable after-sales support.",
+    image:
+      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+    items: [
+      "Laptops & Desktops",
+      "Monitors",
+      "Printers",
+      "Networking Equipment",
+      "Storage Devices",
+      "IT Accessories",
+      "Office Electronics",
+    ],
+  },
+  {
+    id: "remote-support",
+    emoji: <MapPin />,
+    title: "Remote Support",
+    subtitle: "Remote Technical Support",
+    color: "#0EA5E9",
+    bg: "bg-sky-50",
+    desc: "Receive expert assistance without waiting for an on-site visit. Our remote support team quickly diagnoses and resolves software and system issues.",
+    image:
+      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+    items: [
+      "Software Installation",
+      "Windows Configuration",
+      "Driver Installation",
+      "Email Setup",
+      "Security Updates",
+      "Performance Optimization",
     ],
   },
 ];
@@ -112,7 +173,7 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-linear-to-br from-[#0057D9] to-[#003D9D] text-white py-20">
+      <section className="bg-[#2563eb] text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <span className="text-blue-200 text-sm font-medium mb-3 block">
             Our Services
@@ -136,7 +197,7 @@ export default function Services() {
       </section>
 
       {/* Quick links */}
-      <div className="sticky top-16 z-30 bg-white border-b border-border shadow-sm">
+      {/* <div className="sticky top-16 z-30 bg-white border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto py-3 scrollbar-hide">
           {SECTIONS.map((s) => (
             <a
@@ -148,7 +209,7 @@ export default function Services() {
             </a>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Service sections */}
       {SECTIONS.map((s, i) => (

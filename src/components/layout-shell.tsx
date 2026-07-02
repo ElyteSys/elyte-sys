@@ -344,9 +344,9 @@ export default function LayoutShell({ children }: LayoutShellProps) {
               <ul className="space-y-2.5">
                 {[
                   ["About Us", "/about"],
-                  ["AMC Plans", "/amc-plans"],
+                  // ["AMC Plans", "/amc-plans"],
+                  ["Services", "/services"],
                   ["Clients", "/clients"],
-                  ["Blog", "/blog"],
                   ["Contact", "/contact"],
                 ].map(([label, path]) => (
                   <li key={label}>

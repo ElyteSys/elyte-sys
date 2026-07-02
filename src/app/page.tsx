@@ -312,12 +312,12 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-28 lg:py-36 w-full">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#93C5FD] text-xs font-semibold mb-8 tracking-wide">
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-36 w-full">
+          <div className="max-w-3xl mx-auto text-center mb-2">
+            {/* <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#93C5FD] text-xs font-semibold mb-8 tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse" />
               Trusted by 1,200+ Businesses Across India
-            </div>
+            </div> */}
 
             <h1
               className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-white mb-6"
@@ -335,14 +335,14 @@ export default function Home() {
               >
                 Solutions
               </span>{" "}
-              Built
-              <br />
-              for Business
+              for Modern Businesses
             </h1>
 
             <p className="text-lg text-[#6B84A8] leading-relaxed mb-10 max-w-xl mx-auto">
-              Hardware supply · Laptop repair · Annual maintenance · On-site
-              support — one partner managing your entire IT ecosystem.
+              Our mission is to simplify technology management by providing
+              reliable products, expert technical services, and responsive
+              customer support—allowing businesses to focus on growth while we
+              take care of their IT ecosystem.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-14">
@@ -350,13 +350,13 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-blue-900/40 text-sm"
               >
-                Get Free Consultation <ArrowRight className="w-4 h-4" />
+                Get a Free Quote <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+919972669956"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/12 text-white font-semibold rounded-xl hover:bg-white/5 transition-all text-sm"
               >
-                <Phone className="w-4 h-4 text-[#2563EB]" /> Call Us Now
+                <Phone className="w-4 h-4 text-[#2563EB]" /> Contact Our Experts
               </a>
             </div>
 
@@ -384,7 +384,7 @@ export default function Home() {
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {STATS.map(({ value, label }) => (
               <div
                 key={label}
@@ -401,7 +401,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -414,27 +414,24 @@ export default function Home() {
               className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Your Dedicated B2B IT
-              <br />
-              Partner Since 2009
+              Why Businesses Choose ElyteSys
             </h2>
             <p className="text-[#6B84A8] leading-relaxed mb-4">
-              TechServPro is a B2B IT services company specialising in hardware
-              supply, device repair, annual maintenance contracts, flexible
-              rentals, and end-to-end IT infrastructure support for
-              organisations across India.
+              Our commitment extends beyond supplying technology—we build
+              long-term partnerships based on reliability, service excellence,
+              and customer success.
             </p>
-            <p className="text-[#6B84A8] leading-relaxed mb-8">
-              We work exclusively with businesses — understanding that
-              enterprise IT demands faster response, clearer documentation,
-              defined SLAs, and a long-term partnership, not one-time fixes.
-            </p>
+            <p className="text-[#6B84A8] leading-relaxed mb-8">We provide,</p>
             <div className="grid sm:grid-cols-2 gap-3 mb-8">
               {[
-                "OEM-authorised service centre",
-                "ISO 9001:2015 certified",
-                "Dedicated account manager per client",
-                "Pan-India field engineer network",
+                "Dedicated B2B IT Solutions",
+                "Genuine Products from Trusted Brands",
+                "Competitive Corporate Pricing",
+                "Experienced Technical Professionals",
+                "Fast Response & Reliable Support",
+                "Flexible Rental & AMC Plans",
+                "Pan-India Business Support",
+                "Customer-First Service Approach",
               ].map((t) => (
                 <div
                   key={t}
@@ -487,7 +484,7 @@ export default function Home() {
       <section id="services" className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <SectionLabel>Our Services</SectionLabel>
+            <SectionLabel>Our Expertise</SectionLabel>
             <h2
               className="text-3xl lg:text-4xl font-bold text-white mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
