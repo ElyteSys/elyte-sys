@@ -1,24 +1,15 @@
-import { h1 } from "framer-motion/client";
-import {
-  ArrowRight,
-  Award,
-  CheckCircle,
-  Eye,
-  Star,
-  Target,
-} from "lucide-react";
+import { ArrowRight, Award, Eye, Target } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-      
+
 const STATS = [
-  <h1 class = "center">Why Choose ElyteSys?</h1>  
   // { value: "2026", label: "Founded" },
   // { value: "1,200+", label: "Business Clients" },
   // { value: "10+", label: "Years Experience" },
   // { value: "200+", label: "Certified Engineers" },
   // { value: "50+", label: "Cities Served" },
   // { value: "98%", label: "SLA Compliance" },
-];
+] as never[];
 
 const TEAM = [
   {
@@ -48,12 +39,12 @@ const TEAM = [
 ];
 
 const CERTS = [
-  "Dell Authorized Service Provider",
-  "HP Certified Partner",
-  "Lenovo Business Partner",
-  "Microsoft Partner Network",
-  "CompTIA Certified",
-  "ISO 9001:2015 Certified",
+  "Integrity",
+  "Customer Commitment",
+  "Innovation",
+  "Reliability",
+  "Quality Service",
+  "Continuous Improvement",
 ];
 
 export default function About() {
@@ -71,35 +62,43 @@ export default function About() {
           >
             India&apos;s Trusted B2B
             <br />
-            IT Partner 
+            IT Partner
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl">
-            Your Trusted B2B IT Solutions Partner
-At ElyteSys Pvt. Ltd., we help businesses build, maintain, and manage reliable IT infrastructure with high-quality products and professional support.
-Founded in 2026, ElyteSys was established with a vision to simplify enterprise IT procurement and provide dependable technology solutions for businesses of all sizes. Although we are a growing company, our team brings hands-on industry expertise in laptop sales, IT services, and enterprise support.
-We believe every business deserves fast, transparent, and reliable IT solutions backed by exceptional customer service.
+            Your Trusted B2B IT Solutions Partner At ElyteSys Pvt. Ltd., we help
+            businesses build, maintain, and manage reliable IT infrastructure
+            with high-quality products and professional support. Founded in
+            2026, ElyteSys was established with a vision to simplify enterprise
+            IT procurement and provide dependable technology solutions for
+            businesses of all sizes. Although we are a growing company, our team
+            brings hands-on industry expertise in laptop sales, IT services, and
+            enterprise support. We believe every business deserves fast,
+            transparent, and reliable IT solutions backed by exceptional
+            customer service.
           </p>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-          {STATS.map(({ value, label }) => (
-            <div key={label} className="text-center">
-              <div
-                className="text-3xl font-bold text-[#0057D9] mb-1"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                {value}
+      {STATS.length > 0 ? (
+        <section className="bg-white border-b border-border">
+          <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            {STATS.map(({ value, label }) => (
+              <div key={label} className="text-center">
+                <div
+                  className="text-3xl font-bold text-[#0057D9] mb-1"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  {value}
+                </div>
+                <div className="text-xs text-muted-foreground font-medium">
+                  {label}
+                </div>
               </div>
-              <div className="text-xs text-muted-foreground font-medium">
-                {label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {/* Company Overview */}
       <section className="py-20 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -115,10 +114,12 @@ We believe every business deserves fast, transparent, and reliable IT solutions 
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-             We specialize in delivering end-to-end IT solutions for corporate and business clients, including:
-             Enterprise Laptop & Desktop Sales
-             Apple MacBook Sales & ServicesBulk IT Procurement Laptop & Desktop Repair Services Annual Maintenance Contracts (AMC) Rental Laptops for Businesses On-Site IT Support
-             IT Infrastructure Consulting Remote Technical Support Preventive Health Check & Maintenance
+              We specialize in delivering end-to-end IT solutions for corporate
+              and business clients, including: Enterprise Laptop & Desktop Sales
+              Apple MacBook Sales & ServicesBulk IT Procurement Laptop & Desktop
+              Repair Services Annual Maintenance Contracts (AMC) Rental Laptops
+              for Businesses On-Site IT Support IT Infrastructure Consulting
+              Remote Technical Support Preventive Health Check & Maintenance
             </p>
             {/* <p>
               Starting with laptop repair and AMC services for small offices in
@@ -191,7 +192,9 @@ We believe every business deserves fast, transparent, and reliable IT solutions 
               Our Mission
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              To become one of India's most trusted B2B IT partners by delivering reliable technology solutions, exceptional service, and long-term value to every client.
+              To become one of India&apos;s most trusted B2B IT partners by
+              delivering reliable technology solutions, exceptional service, and
+              long-term value to every client.
             </p>
           </div>
           <div className="bg-[#0057D9] rounded-2xl p-8 text-white">
@@ -199,13 +202,15 @@ We believe every business deserves fast, transparent, and reliable IT solutions 
               <Eye className="w-6 h-6 text-white" />
             </div>
             <h3
-              className="text-xl font-bold mb-3"  
+              className="text-xl font-bold mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Our Vision
             </h3>
             <p className="text-blue-100 leading-relaxed">
-              To empower businesses with innovative, affordable, and dependable IT solutions while building lasting relationships based on trust, quality, and customer satisfaction.
+              To empower businesses with innovative, affordable, and dependable
+              IT solutions while building lasting relationships based on trust,
+              quality, and customer satisfaction.
             </p>
           </div>
         </div>
@@ -258,7 +263,6 @@ We believe every business deserves fast, transparent, and reliable IT solutions 
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Our Core Values
-
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -285,8 +289,10 @@ We believe every business deserves fast, transparent, and reliable IT solutions 
             Ready to Partner with Us?
           </h2>
           <p className="text-gray-400 mb-7">
-            Serving Businesses Across India
-Whether you're a startup, SME, educational institution, or enterprise, ElyteSys is committed to delivering the right technology solutions to help your business grow efficiently.
+            Serving Businesses Across India Whether you&apos;re a startup, SME,
+            educational institution, or enterprise, ElyteSys is committed to
+            delivering the right technology solutions to help your business grow
+            efficiently.
           </p>
           <Link
             href="/contact"

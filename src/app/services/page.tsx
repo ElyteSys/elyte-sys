@@ -1,11 +1,19 @@
-import { ArrowRight, CheckCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle,
+  Clipboard,
+  Laptop,
+  MapPin,
+  Wrench,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const SECTIONS = [
   {
     id: "sales",
-    emoji: "💻",
+    emoji: <Laptop />,
     title: "Laptop Sales",
     subtitle: "New, Refurbished & Bulk Corporate Orders",
     color: "#0057D9",
@@ -24,7 +32,7 @@ const SECTIONS = [
   },
   {
     id: "repair",
-    emoji: "🔧",
+    emoji: <Wrench />,
     title: "Laptop Service & Repair",
     subtitle: "Hardware Repairs by Certified Technicians",
     color: "#7C3AED",
@@ -43,7 +51,7 @@ const SECTIONS = [
   },
   {
     id: "amc",
-    emoji: "📋",
+    emoji: <Clipboard />,
     title: "AMC Support",
     subtitle: "Annual Maintenance Contracts with SLA Guarantees",
     color: "#10B981",
@@ -62,7 +70,7 @@ const SECTIONS = [
   },
   {
     id: "it",
-    emoji: "🏢",
+    emoji: <Building2 />,
     title: "B2B IT Solutions",
     subtitle: "End-to-End Infrastructure for Growing Businesses",
     color: "#F59E0B",
@@ -81,7 +89,7 @@ const SECTIONS = [
   },
   {
     id: "onsite",
-    emoji: "🚗",
+    emoji: <MapPin />,
     title: "On-Site Support",
     subtitle: "Resident Engineers & Emergency Dispatch",
     color: "#0EA5E9",
@@ -116,9 +124,13 @@ export default function Services() {
             Complete IT Services for Businesses
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            End-to-End Technology Solutions for Modern Enterprises
-            At ElyteSys Pvt. Ltd., <p>we provide reliable IT products and professional services that help businesses operate efficiently and securely. From enterprise procurement to technical support, we are your trusted technology partner for all your business IT needs.</p>
-            
+            End-to-End Technology Solutions for Modern Enterprises At ElyteSys
+            Pvt. Ltd.,
+            <br />
+            we provide reliable IT products and professional services that help
+            businesses operate efficiently and securely. From enterprise
+            procurement to technical support, we are your trusted technology
+            partner for all your business IT needs.
           </p>
         </div>
       </section>
@@ -150,7 +162,7 @@ export default function Services() {
           >
             <div className={i % 2 === 1 ? "lg:order-2" : ""}>
               <div
-                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${s.bg} text-sm font-semibold mb-4`}
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-4`}
                 style={{ color: s.color }}
               >
                 <span>{s.emoji}</span> {s.title}
@@ -209,8 +221,11 @@ export default function Services() {
             Ready to Upgrade Your Business IT?
           </h2>
           <p className="text-gray-400 mb-7">
-Whether you're looking for enterprise laptop procurement, AMC support, rental laptops, IT infrastructure solutions, or professional repair services, ElyteSys Pvt. Ltd. is here to help.
-Contact us today for a free consultation and customized business IT solution.
+            Whether you&apos;re looking for enterprise laptop procurement, AMC
+            support, rental laptops, IT infrastructure solutions, or
+            professional repair services, ElyteSys Pvt. Ltd. is here to help.
+            Contact us today for a free consultation and customized business IT
+            solution.
           </p>
           <Link
             href="/contact"

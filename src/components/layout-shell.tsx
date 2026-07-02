@@ -21,19 +21,23 @@ const NAV = [
   {
     label: "Services",
     path: "/services",
-    dropdown: [
-      { label: "IT Solutions & Sales", path: "/services#sales" },
-      { label: "Laptop Service & Repair", path: "/services#repair" },
-      { label: "AMC Support", path: "/amc-plans" },
-      { label: "Hardware Rentals", path: "/rentals" },
-      { label: "On-Site Support", path: "/services#onsite" },
-    ],
+    // dropdown: [
+    //   { label: "IT Solutions & Sales", path: "/services#sales" },
+    //   { label: "Laptop Service & Repair", path: "/services#repair" },
+    //   { label: "AMC Support", path: "/amc-plans" },
+    //   { label: "Hardware Rentals", path: "/rentals" },
+    //   { label: "On-Site Support", path: "/services#onsite" },
+    // ],
   },
-  { label: "AMC Plans", path: "/amc-plans" },
-  { label: "Rentals", path: "/rentals" },
+  // { label: "AMC Plans", path: "/amc-plans" },
+  // { label: "Rentals", path: "/rentals" },
   { label: "Clients", path: "/clients" },
   { label: "Contact", path: "/contact" },
-];
+] as {
+  label: string;
+  path: string;
+  dropdown?: { label: string; path: string }[];
+}[];
 
 interface LayoutShellProps {
   children: ReactNode;
