@@ -178,6 +178,34 @@ export default function About() {
         </div>
       </section>
 
+      {/* Certifications */}
+      <section className="py-20 bg-[#F1F5F9]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10">
+            {/* <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-2 block">
+              Credentials
+            </span> */}
+            <h2
+              className="text-3xl font-bold text-[#111827]"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Our Core Values
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {CERTS.map((c) => (
+              <div
+                key={c}
+                className="bg-white border border-border rounded-xl px-5 py-4 flex items-center gap-3"
+              >
+                <Award className="w-5 h-5 text-[#10B981] shrink-0" />
+                <span className="text-sm font-medium text-[#374151]">{c}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-20 bg-[#F1F5F9]">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
@@ -250,34 +278,6 @@ export default function About() {
           ))}
         </div>
       </section> */}
-
-      {/* Certifications */}
-      <section className="py-20 bg-[#F1F5F9]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-10">
-            {/* <span className="text-xs font-semibold tracking-widest text-[#0057D9] uppercase mb-2 block">
-              Credentials
-            </span> */}
-            <h2
-              className="text-3xl font-bold text-[#111827]"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              Our Core Values
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CERTS.map((c) => (
-              <div
-                key={c}
-                className="bg-white border border-border rounded-xl px-5 py-4 flex items-center gap-3"
-              >
-                <Award className="w-5 h-5 text-[#10B981] shrink-0" />
-                <span className="text-sm font-medium text-[#374151]">{c}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-16 bg-[#111827] text-white text-center">

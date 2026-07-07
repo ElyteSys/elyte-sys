@@ -91,6 +91,10 @@ export default function LayoutShell({ children }: LayoutShellProps) {
       {/* Top Contact Strip */}
       <div className="hidden lg:block bg-[#050A15] border-b border-white/5 text-xs text-[#6B84A8]">
         <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+          <span className="flex items-center gap-1.5">
+            GST: 33AAJCE7604E1ZW
+          </span>
+
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
               <Phone className="w-3 h-3 text-[#2563EB]" />
@@ -102,11 +106,6 @@ export default function LayoutShell({ children }: LayoutShellProps) {
               info@elytesys.com
             </span>
           </div>
-
-          <span className="flex items-center gap-1.5">
-            <MapPin className="w-3 h-3 text-[#2563EB]" />
-            Chennai
-          </span>
         </div>
       </div>
 
@@ -203,10 +202,11 @@ export default function LayoutShell({ children }: LayoutShellProps) {
             </a>
 
             <Link
-              href="/contact"
+              href="mailto:info@elytesys.com"
               className="flex items-center gap-2 px-4 py-2 bg-[#2563EB] text-white rounded-lg text-sm font-semibold hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/40"
             >
-              Get a Quote
+              <Mail className="w-3 h-3" />
+              Send mail
             </Link>
           </div>
 
@@ -296,7 +296,7 @@ export default function LayoutShell({ children }: LayoutShellProps) {
                 AMC, and infrastructure support since 2009.
               </p>
 
-              <div className="flex gap-2.5">
+              {/* <div className="flex gap-2.5">
                 {[X].map((Icon, i) => (
                   <a
                     key={i}
@@ -306,7 +306,7 @@ export default function LayoutShell({ children }: LayoutShellProps) {
                     <Icon className="w-3.5 h-3.5 text-[#6B84A8]" />
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Services */}

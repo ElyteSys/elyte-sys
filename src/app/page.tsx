@@ -6,26 +6,24 @@ import {
   CalendarCheck,
   CheckCircle,
   ChevronRight,
-  ClipboardList,
-  Clock,
   Cog,
+  DraftingCompass,
   Factory,
   GraduationCap,
   Headphones,
+  Headset,
   HeartPulse,
   Landmark,
   Mail,
-  MapPin,
   MapPinned,
   MessageCircle,
+  MessageSquare,
   MessagesSquare,
   Monitor,
   PackageOpen,
   Phone,
+  Rocket,
   Search,
-  Shield,
-  Star,
-  TrendingUp,
   Wrench,
   Zap,
 } from "lucide-react";
@@ -201,29 +199,24 @@ const STATS = [
 
 const WHY = [
   {
-    icon: Shield,
-    title: "Experienced Engineers",
-    desc: "OEM-certified technicians trained by Dell, HP, Lenovo, and Apple — backed by 15+ years of B2B field experience.",
+    icon: MessageSquare,
+    title: "Consultation",
+    desc: "We understand your business goals, challenges, and technology requirements.",
   },
   {
-    icon: Clock,
-    title: "Fast Response Times",
-    desc: "4-hour average on-site response SLA. Same-day emergency dispatch available for critical system failures.",
+    icon: DraftingCompass,
+    title: "Solution Design",
+    desc: "Our experts recommended customized IT solutions that align with your objectives and budget.",
   },
   {
-    icon: Building2,
-    title: "Corporate-Focused Support",
-    desc: "Processes, documentation, and escalation paths designed for business environments — not consumer-level support.",
+    icon: Rocket,
+    title: "Deployment",
+    desc: "We implement your solution efficiently, ensuring minimal disruption to business operations.",
   },
   {
-    icon: ClipboardList,
-    title: "Flexible Service Contracts",
-    desc: "Monthly, quarterly, or annual AMC and support contracts structured around how your business actually operates.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Reliable Technical Expertise",
-    desc: "200+ engineers across India, continuous training, and a dedicated account manager for every client.",
+    icon: Headset,
+    title: "Ongoing Support",
+    desc: "Our dedicated support team provides proactive maintenance, technical assistance, and continuous optimization.",
   },
 ];
 
@@ -407,7 +400,7 @@ export default function Home() {
 
       {/* ── ABOUT INTRO ────────────────────────────────────────── */}
       <section className="py-24 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 items-center">
           <div>
             <SectionLabel>About Us</SectionLabel>
             <h2
@@ -450,7 +443,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <GlowCard className="p-6 col-span-2">
               <p className="text-[#6B84A8] text-sm leading-relaxed mb-4 italic">
                 &ldquo;We are not a break-fix shop. We are a long-term IT
@@ -476,7 +469,7 @@ export default function Home() {
                 <div className="text-xs text-[#4B6280]">{l}</div>
               </GlowCard>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -649,20 +642,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <SectionLabel>Why Choose Us</SectionLabel>
+              <SectionLabel>Our Process</SectionLabel>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                Built for Business IT.
-                <br />
-                Not Consumer Support.
+                Simple. Transparent. Efficient.
               </h2>
-              <p className="text-[#6B84A8] leading-relaxed mb-10">
+              {/* <p className="text-[#6B84A8] leading-relaxed mb-10">
                 Every process, SLA, and communication standard we operate under
                 is designed for organisations where IT downtime has a direct
                 cost — not for individuals troubleshooting personal devices.
-              </p>
+              </p> */}
               <div className="space-y-3">
                 {WHY.map(({ icon: Icon, title, desc }) => (
                   <GlowCard key={title} className="p-5 flex gap-4">
@@ -685,7 +676,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:pt-14 mt-50.75">
+            <div className="lg:pt-14 mt-11">
               <Image
                 src="https://images.unsplash.com/photo-1629837093109-11325d6e7afd?w=700&h=520&fit=crop&auto=format"
                 alt="IT engineer on-site"
@@ -723,17 +714,17 @@ export default function Home() {
           <div className="text-center mb-12">
             <SectionLabel>Industries We Support</SectionLabel>
             <h2
-              className="text-3xl lg:text-4xl font-bold text-white mb-3"
+              className="text-3xl lg:text-4xl font-bold text-white mb-10"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               IT Support Across Every Sector
             </h2>
-            <p className="text-[#6B84A8] max-w-lg mx-auto">
+            <p className="text-[#6B84A8] text-xl max-w-lg mx-auto">
               Our engineers understand the operational pace, compliance
               requirements, and IT priorities of each sector.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
             {INDUSTRIES.map(({ icon: Icon, label }) => (
               <GlowCard key={label} className="p-5 text-center cursor-default">
                 <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 border border-[#2563EB]/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#2563EB]/20 transition-colors">
@@ -744,10 +735,10 @@ export default function Home() {
                 </p>
               </GlowCard>
             ))}
-          </div>
+          </div> */}
 
           {/* Aggregate numbers */}
-          <div className="bg-[#0D1528] border border-white/[0.07] rounded-2xl p-6 grid sm:grid-cols-3 gap-6 text-center">
+          {/* <div className="bg-[#0D1528] border border-white/[0.07] rounded-2xl p-6 grid sm:grid-cols-3 gap-6 text-center">
             {[
               {
                 value: "1,200+",
@@ -778,7 +769,7 @@ export default function Home() {
                 <div className="text-xs text-[#4B6280]">{sub}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -836,7 +827,7 @@ export default function Home() {
       </section>
 
       {/* ── TESTIMONIALS ───────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/5">
+      {/* <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <SectionLabel>Client Testimonials</SectionLabel>
@@ -883,7 +874,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CONTACT ────────────────────────────────────────────── */}
       <section className="py-24 border-t border-white/5">
@@ -891,19 +882,25 @@ export default function Home() {
           <div className="text-center mb-12">
             <SectionLabel>Contact Us</SectionLabel>
             <h2
-              className="text-3xl lg:text-4xl font-bold text-white mb-3"
+              className="text-3xl lg:text-4xl font-bold text-white mb-10"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Talk to Our Team
+              Let&quot;s Build Smarter IT Solutions Together
             </h2>
-            <p className="text-[#6B84A8] max-w-lg mx-auto">
-              Describe your IT requirement and we will respond within 2 business
-              hours.
+            <p className="text-[#6B84A8] text-lg mx-auto">
+              Whether you&quot;re looking for enterprise IT procurement, laptop
+              sales, infrastructure solutions, AMC services, or technical
+              support, our team is ready to help. Get in touch with ElyteSys
+              Pvt. Ltd. for expert guidance and customized IT solutions tailored
+              to your business needs.
+              <br />
+              We are committed to providing prompt responses, professional
+              service, and reliable technology solutions that help your business
+              succeed.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact tiles */}
+          {/* <div className="grid lg:grid-cols-3 gap-8">
             <div className="space-y-25">
               {[
                 {
@@ -972,7 +969,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Form */}
             <div className="lg:col-span-2">
               <GlowCard className="p-7">
                 <h3
@@ -984,7 +980,7 @@ export default function Home() {
                 <HomeContactForm />
               </GlowCard>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -1008,20 +1004,24 @@ export default function Home() {
             />
             <div className="relative">
               <h2
-                className="text-3xl lg:text-4xl font-bold text-white mb-3"
+                className="text-3xl lg:text-4xl font-bold text-white mb-8"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Ready to Discuss Your IT Requirements?
               </h2>
               <p className="text-[#6B84A8] mb-8 text-lg">
-                We serve businesses of all sizes — from 5 devices to 5,000.
+                Whether you need IT support, hardware procurement, or managed
+                services, we&quot;re here to help.
+                <br />
+                Let&quot;s build a technology solution that keeps your business
+                running efficiently.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link
-                  href="/contact"
+                  href="mailto:info@elytesys.com"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#2563EB] text-white font-semibold rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-blue-900/40 text-sm"
                 >
-                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                  <Mail className="w-4 h-4" /> Send Email
                 </Link>
                 <a
                   href="https://wa.me/919972669956"

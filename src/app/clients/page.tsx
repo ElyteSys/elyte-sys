@@ -18,11 +18,7 @@ const INDUSTRIES = [
   { icon: Landmark, label: "Government Organizations", count: "80+" },
 ];
 
-const LOGOS = [
-  "BigThinkCode",
-  "LightMetrics",
-  "ARMTECH India"
-];
+const LOGOS = ["BigThinkCode", "LightMetrics", "ARMTECH India"];
 
 const CASE_STUDIES = [
   {
@@ -78,7 +74,7 @@ export default function Clients() {
       </section>
 
       {/* Client logos */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      {/* <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="text-center mb-10">
           <h2
             className="text-2xl font-bold"
@@ -99,10 +95,10 @@ export default function Clients() {
             </div>
           ))}
         </div>
-        {/* <p className="text-center text-sm text-muted-foreground mt-6">
+        <p className="text-center text-sm text-muted-foreground mt-6">
           + 1,188 more businesses across India
-        </p> */}
-      </section>
+        </p>
+      </section> */}
 
       {/* Industries */}
       <section className="py-20 bg-[#F1F5F9]">
@@ -127,12 +123,12 @@ export default function Clients() {
                 <p className="text-xs font-medium text-[#374151] mb-1">
                   {label}
                 </p>
-                <p
+                {/* <p
                   className="text-xl font-bold text-[#0057D9]"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   {count}
-                </p>
+                </p> */}
               </div>
             ))}
           </div>
@@ -175,7 +171,6 @@ export default function Clients() {
                         {challenge}
                       </p>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -196,7 +191,6 @@ export default function Clients() {
           <p className="text-gray-400 mb-7">
             Looking for a reliable IT partner for laptop procurement, AMC
             services, rentals, infrastructure solutions, or technical support?
-
             Partner with ElyteSys Pvt. Ltd. and experience professional IT
             services tailored to your business needs.
           </p>

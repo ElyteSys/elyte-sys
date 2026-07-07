@@ -23,6 +23,23 @@ type FormData = {
   message: string;
 };
 
+function GlowCard({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`relative group bg-[#0D1528] border border-white/[0.07] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#2563EB]/40 hover:shadow-xl hover:shadow-blue-900/20 ${className}`}
+    >
+      <div className="absolute inset-0 bg-linear-to-br from-[#2563EB]/0 to-[#2563EB]/0 group-hover:from-[#2563EB]/5 group-hover:to-transparent transition-all duration-500 pointer-events-none" />
+      {children}
+    </div>
+  );
+}
+
 export default function Contact() {
   const [form, setForm] = useState<FormData>({
     name: "",
@@ -47,6 +64,10 @@ export default function Contact() {
     e.preventDefault();
     setSubmitted(true);
   };
+
+  const inputCls =
+    "w-full px-4 py-2.5 text-sm border border-white/[0.08] rounded-xl bg-[#111D35] text-[#E2E8F0] placeholder:text-[#3A4E68] focus:outline-none focus:border-[#2563EB]/60 transition-colors";
+  const labelCls = "text-xs font-medium text-[#4B6280] mb-1.5 block";
 
   return (
     <div>
@@ -114,36 +135,38 @@ export default function Contact() {
                   color: "#F59E0B",
                 },
               ].map(({ icon: Icon, label, lines, href, color }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 bg-white border border-border rounded-xl p-4 hover:border-blue-300 hover:shadow-sm transition-all group"
-                >
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: `${color}15` }}
+                <GlowCard key={label}>
+                  <a
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 border border-border rounded-xl p-4 hover:border-blue-300 hover:shadow-sm transition-all group"
                   >
-                    <Icon className="w-5 h-5" style={{ color }} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1">
-                      {label}
-                    </p>
-                    {lines.map((l) => (
-                      <p key={l} className="text-sm font-medium text-[#111827]">
-                        {l}
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: `${color}15` }}
+                    >
+                      <Icon className="w-5 h-5" style={{ color }} />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground mb-1">
+                        {label}
                       </p>
-                    ))}
-                  </div>
-                </a>
+                      {lines.map((l) => (
+                        <p key={l} className="text-sm font-medium text-white">
+                          {l}
+                        </p>
+                      ))}
+                    </div>
+                  </a>
+                </GlowCard>
               ))}
             </div>
           </div>
 
           {/* Hours */}
-          <div className="bg-white border border-border rounded-xl p-5">
+          {/* <div className="bg-white border border-border rounded-xl p-5"> */}
+          <GlowCard className=" border border-border rounded-xl p-5">
             <div className="flex items-center gap-2 mb-3">
               <Clock className="w-4 h-4 text-[#0057D9]" />
               <h3
@@ -160,15 +183,16 @@ export default function Contact() {
                 ["Sunday", "Emergency only"],
               ].map(([day, time]) => (
                 <div key={day} className="flex justify-between">
-                  <span className="text-muted-foreground">{day}</span>
-                  <span className="font-medium text-[#374151]">{time}</span>
+                  <span className="text-white">{day}</span>
+                  <span className="font-medium text-white">{time}</span>
                 </div>
               ))}
             </div>
-          </div>
+          </GlowCard>
+          {/* </div> */}
 
           {/* Service areas */}
-          <div className="bg-white border border-border rounded-xl p-5">
+          {/* <div className="bg-white border border-border rounded-xl p-5">
             <h3
               className="font-semibold text-[#111827] text-sm mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -185,13 +209,13 @@ export default function Contact() {
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: form */}
         <div className="lg:col-span-2 pt-11.5">
           {submitted ? (
-            <div className="bg-white border border-border rounded-2xl p-12 flex flex-col items-center justify-center text-center h-full min-h-125">
+            <GlowCard className="border border-border rounded-2xl p-12 flex flex-col items-center justify-center text-center h-full min-h-125">
               <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-5">
                 <CheckCircle className="w-8 h-8 text-[#10B981]" />
               </div>
@@ -215,11 +239,11 @@ export default function Contact() {
               >
                 Submit another enquiry
               </button>
-            </div>
+            </GlowCard>
           ) : (
-            <div className="bg-white border border-border rounded-2xl p-8">
+            <GlowCard className=" border border-border rounded-2xl p-8">
               <h2
-                className="text-2xl font-bold text-[#111827] mb-2"
+                className="text-2xl font-bold text-white mb-2"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Send Us an Enquiry
@@ -261,9 +285,7 @@ export default function Contact() {
                     },
                   ].map(({ name, label, placeholder, type, req }) => (
                     <div key={name}>
-                      <label className="text-xs font-medium text-[#374151] mb-1.5 block">
-                        {label}
-                      </label>
+                      <label className={labelCls}>{label}</label>
                       <input
                         name={name}
                         type={type}
@@ -271,7 +293,7 @@ export default function Contact() {
                         value={(form as Record<string, string>)[name]}
                         onChange={handle}
                         placeholder={placeholder}
-                        className="w-full px-3.5 py-2.5 text-sm border border-border rounded-lg text-[#111827] placeholder:text-muted-foreground focus:outline-none focus:border-[#0057D9] transition-colors bg-[#F8FAFC]"
+                        className={inputCls}
                       />
                     </div>
                   ))}
@@ -279,14 +301,12 @@ export default function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-medium text-[#374151] mb-1.5 block">
-                      Service Required
-                    </label>
+                    <label className={labelCls}>Service Required</label>
                     <select
                       name="service"
                       value={form.service}
                       onChange={handle}
-                      className="w-full px-3.5 py-2.5 text-sm border border-border rounded-lg text-[#111827] focus:outline-none focus:border-[#0057D9] transition-colors bg-[#F8FAFC]"
+                      className={inputCls}
                     >
                       <option value="">Select a service…</option>
                       <option>Laptop Sales</option>
@@ -299,14 +319,12 @@ export default function Contact() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-xs font-medium text-[#374151] mb-1.5 block">
-                      Number of Employees
-                    </label>
+                    <label className={labelCls}>Number of Employees</label>
                     <select
                       name="employees"
                       value={form.employees}
                       onChange={handle}
-                      className="w-full px-3.5 py-2.5 text-sm border border-border rounded-lg text-[#111827] focus:outline-none focus:border-[#0057D9] transition-colors bg-[#F8FAFC]"
+                      className={inputCls}
                     >
                       <option value="">Select range…</option>
                       <option>1–10</option>
@@ -319,7 +337,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-xs font-medium text-[#374151] mb-1.5 block">
+                  <label className="text-xs font-medium text-white mb-1.5 block">
                     Message / Requirements
                   </label>
                   <textarea
@@ -328,7 +346,7 @@ export default function Contact() {
                     onChange={handle}
                     rows={5}
                     placeholder="Tell us about your current IT setup, challenges, device count, or any specific requirements…"
-                    className="w-full px-3.5 py-2.5 text-sm border border-border rounded-lg text-[#111827] placeholder:text-muted-foreground focus:outline-none focus:border-[#0057D9] transition-colors resize-none bg-[#F8FAFC]"
+                    className={`${inputCls} resize-none`}
                   />
                 </div>
 
@@ -343,7 +361,7 @@ export default function Contact() {
                   shared.
                 </p>
               </form>
-            </div>
+            </GlowCard>
           )}
         </div>
       </div>
