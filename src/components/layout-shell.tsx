@@ -293,7 +293,7 @@ export default function LayoutShell({ children }: LayoutShellProps) {
 
               <p className="text-sm text-[#4B6280] leading-relaxed mb-5">
                 India&apos;s trusted B2B IT partner — hardware supply, repair,
-                AMC, and infrastructure support since 2009.
+                AMC, and infrastructure support.
               </p>
 
               {/* <div className="flex gap-2.5">

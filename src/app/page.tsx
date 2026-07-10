@@ -484,10 +484,10 @@ export default function Home() {
             >
               Everything Your Business IT Needs
             </h2>
-            <p className="text-[#6B84A8] max-w-xl mx-auto">
+            {/* <p className="text-[#6B84A8] max-w-xl mx-auto">
               Five core service areas — each run by specialist engineers with
               defined SLAs and a single point of contact.
-            </p>
+            </p> */}
           </div>
 
           {/* Tab row */}
@@ -682,9 +682,9 @@ export default function Home() {
                 alt="IT engineer on-site"
                 width={700}
                 height={520}
-                className="w-full h-72 object-cover rounded-2xl border border-white/6 mb-4"
+                className="w-full h-120 object-cover rounded-2xl border border-white/6 mb-4"
               />
-              <div className="grid grid-cols-3 gap-3">
+              {/* <div className="grid grid-cols-3 gap-3">
                 {[
                   { v: "98%", l: "SLA Compliance" },
                   { v: "4 hrs", l: "Response SLA" },
@@ -702,7 +702,7 @@ export default function Home() {
                     </div>
                   </GlowCard>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
