@@ -20,7 +20,7 @@ const SECTIONS = [
     bg: "bg-blue-50",
     desc: "Equip your business with genuine laptops, desktops, workstations, and accessories from leading brands such as Dell, HP, Lenovo, Apple, ASUS, Acer, and more. Whether you need a single device or a bulk corporate order, we deliver quality products at competitive prices.",
     image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&h=440&fit=crop&auto=format",
+      "/images/desktop_laptop.png",
     items: [
       "Corporate Laptop Sales",
       "Bulk IT Procurement",
@@ -39,7 +39,7 @@ const SECTIONS = [
     bg: "bg-purple-50",
     desc: "Our certified technicians handle everything from screen cracks to motherboard-level repairs, with genuine OEM parts.",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=440&fit=crop&auto=format",
+      "/images/chip_level_service.png",
     items: [
       "Hardware Repair — keyboards, ports, batteries",
       "Motherboard-level repair & component replacement",
@@ -58,7 +58,7 @@ const SECTIONS = [
     bg: "bg-green-50",
     desc: "Reduce unexpected breakdowns with our comprehensive AMC solutions. We offer preventive maintenance, priority support, and regular health checks to ensure your IT infrastructure remains reliable throughout the year.",
     image:
-      "https://images.unsplash.com/photo-1629837093109-11325d6e7afd?w=700&h=440&fit=crop&auto=format",
+     "/images/maintanence.png",
     items: [
       "AMC Includes",
       "Preventive Maintenance",
@@ -78,7 +78,7 @@ const SECTIONS = [
     bg: "bg-amber-50",
     desc: "Build a secure, scalable, and efficient IT environment with our infrastructure services designed for startups, SMEs, and enterprise organizations.",
     image:
-      "https://images.unsplash.com/photo-1680992046626-418f7e910589?w=700&h=440&fit=crop&auto=format",
+      "/images/networking.png",
     items: [
       "Office IT Setup",
       "Network Installation",
@@ -98,7 +98,7 @@ const SECTIONS = [
     bg: "bg-sky-50",
     desc: "Need laptops for a short-term project, training session, or temporary workforce? We provide flexible rental solutions with fully configured business-ready devices.",
     image:
-      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+      "/images/laptop-gallery.png",
     items: [
       "Daily, Weekly & Monthly Plans",
       "Bulk Laptop Rentals",
@@ -117,7 +117,7 @@ const SECTIONS = [
     bg: "bg-sky-50",
     desc: "Our experienced engineers provide prompt on-site assistance to resolve technical issues quickly and efficiently.",
     image:
-      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+      "/images/it_support.png",
     items: [
       "Support Services",
       "Hardware Troubleshooting",
@@ -137,7 +137,7 @@ const SECTIONS = [
     bg: "bg-sky-50",
     desc: "Simplify your IT purchasing process with our procurement services. We help businesses source quality IT equipment at competitive prices with reliable after-sales support.",
     image:
-      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+      "/images/devices.png",
     items: [
       "Laptops & Desktops",
       "Monitors",
@@ -157,7 +157,7 @@ const SECTIONS = [
     bg: "bg-sky-50",
     desc: "Receive expert assistance without waiting for an on-site visit. Our remote support team quickly diagnoses and resolves software and system issues.",
     image:
-      "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=700&h=440&fit=crop&auto=format",
+      "/images/remote_support.png",
     items: [
       "Software Installation",
       "Windows Configuration",

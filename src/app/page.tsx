@@ -678,7 +678,7 @@ export default function Home() {
 
             <div className="lg:pt-14 mt-11">
               <Image
-                src="https://images.unsplash.com/photo-1629837093109-11325d6e7afd?w=700&h=520&fit=crop&auto=format"
+                src="/images/rack_server.png"
                 alt="IT engineer on-site"
                 width={700}
                 height={520}
